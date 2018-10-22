@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Details</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="fonts/icon.css">
+    <style>
+        /* .todo-btn a:hover{} */
+    </style>
+</head>
+
+<body>
+    <div class="col-md-12" id="header">
+        <div class="col-md-10" id="sub-header">
+            <h2>JavaScript To-Do App</h2>
+        </div>
+
+        <div class="col-md-2" id="username"></div>
+    </div>
+    <div class="col-md-12">
+        <h1>Todo Details</h1>
+        <div class="col-md-3" style="margin-bottom: 15px;">
+            <button autofocus class="buttons btn-p " onclick="location.href='index.html'">All Todos</button>
+            <button autofocus class="buttons btn-p active" onclick="location.href='create.html'">Add New Todo</button>
+            <button autofocus class="buttons btn-p" onclick="location.href='complete.html'">Complete Todo</button>
+            <button autofocus class="buttons btn-p btn-delete modal-trigger" data-target="clearStorage">Delete All
+                Todos</button>
+        </div>
+        <style>
+            td {
+                padding: 15px;
+            }
+        </style>
+        <div class="col-md-9">
+            <div id="results">
+                <div style="margin:0 auto;width:50%;">
+                    <table style="text-align: center">
+                        <tbody>
+                            <tr>
+                                <td><b><i class="material-icons">edit</i>  Title</b></td>
+                                <td><i id="title"></i></td>
+                            </tr>
+                            <tr>
+                                <td><b><i class="material-icons">assignment</i>  Content</b></td>
+                                <td><i id="content"></i></td>
+                            </tr>
+                            <tr>
+                                <td><b><i class="material-icons">location_on</i>  Location</b></td>
+                                <td><i id="locations"></i></i></td>
+                            </tr>
+                            <tr>
+                                <td><b><i class="material-icons">event</i>  Date</b></td>
+                                <td><i id="date"></i></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <button id="done" class="buttons btn-p">Task Complete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="credit">
+            Made by Hamza Shafiq
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="clearStorage" class="modal">
+        <div class="modal-content" style="text-align:center;">
+            <div id="preloader-content">
+                <h4>Are You Sure to Clear All Storage Data</h4>
+                <a href="javascript:void(0)" style="text-decoration:none;font-weight: bold;" class="modal-close waves-effect waves-blue btn-flat">Cancel</a>
+                <a href="javascript:void(0)" style="text-decoration:none;font-weight: bold;" class="waves-effect waves-blue btn-flat"
+                    onclick="preloader()">Continue</a>
+            </div>
+            <div id="preloader-content1" style="display:none;">
+
+                <div class="preloader-wrapper small active">
+                    <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="spinner-layer spinner-yellow">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="spinner-layer spinner-green">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-weight:bold;">Please wait...</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modals -->
+
+    <script src="js/materialize.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/details.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

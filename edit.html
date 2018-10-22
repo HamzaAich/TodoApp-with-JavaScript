@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Todos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="fonts/icon.css">
+</head>
+
+<body onload="update();">
+    <div class="col-md-12" id="header">
+        <div class="col-md-10" id="sub-header">
+            <h2>JavaScript Assignment</h2>
+        </div>
+
+        <div class="col-md-2" id="username"></div>
+    </div>
+
+    <div class="col-md-12">
+        <h1>Add New Todo</h1>
+        <div class="col-md-3" style="margin-bottom: 15px;">
+            <button autofocus class="buttons btn-p " onclick="location.href='index.html'">All Todos</button>
+            <button autofocus class="buttons btn-p active" onclick="location.href='create.html'">Add New Todo</button>
+            <button autofocus class="buttons btn-p" onclick="location.href='complete.html'">Complete Todo</button>
+            <button autofocus class="buttons btn-p btn-delete modal-trigger" data-target="clearStorage">Delete All
+                Todos</button>
+        </div>
+
+        <div class="col-md-9">
+            <div id="results">
+                <form action="index.html" onsubmit="return updatee()">
+                    <input type="text" class="create-input" autocomplete="off" required id="title" name="title"
+                        placeholder="Title"> <br>
+                    <input type="text" class="create-input" autocomplete="off" required id="content" name="content"
+                        placeholder="Content"> <br>
+                    <input type="text" class="create-input" autocomplete="off" required id="locations" name="locations"
+                        placeholder="Locations"> <br>
+                    <input type="text" class="datepicker create-input" autocomplete="off" required id="date" name="date"
+                        placeholder="Date"> <br>
+                    <div style="margin:0 auto;width: 40%;">
+                        <button type="submit" class="buttons btn-p">Add</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="credit">
+            Made by Hamza Shafiq
+        </div>
+    </footer>
+    <!-- Modals -->
+    <div id="clearStorage" class="modal">
+        <div class="modal-content" style="text-align:center;">
+            <div id="preloader-content">
+                <h4>Are You Sure to Clear All Storage Data</h4>
+                <a href="javascript:void(0)" style="text-decoration:none;font-weight: bold;" class="modal-close waves-effect waves-blue btn-flat">Cancel</a>
+                <a href="javascript:void(0)" style="text-decoration:none;font-weight: bold;" class="waves-effect waves-blue btn-flat"
+                    onclick="preloader()">Continue</a>
+            </div>
+            <div id="preloader-content1" style="display:none;">
+
+                <div class="preloader-wrapper small active">
+                    <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="spinner-layer spinner-red">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="spinner-layer spinner-yellow">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+
+                    <div class="spinner-layer spinner-green">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-weight:bold;">Please wait...</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- Modals -->
+    <script src="js/materialize.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/edit.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
